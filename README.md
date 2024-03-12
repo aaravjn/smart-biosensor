@@ -1,7 +1,7 @@
 
 # hCG concentration prediction using deep learning and computer vision
 
-[Model notebook link](https://colab.research.google.com/drive/1f5Pt4IbzCRCrD8QIA5-YvNCn05UAD8s2?usp=sharing)
+[Model notebook link](https://colab.research.google.com/drive/1f5Pt4IbzCRCrD8QIA5-YvNCn05UAD8s2?usp=sharing) 
 
 We are working on a project, and our goal is to predict the concentration of analytes from images of test kits. We've curated a dataset of different test kit images for  different HCG concentrations, both newly collected data by our group and previously gathered in the lab. We used Roboflow for object detection to identify the distinct regions corresponding to the C and T strips in the kit. Subsequently, We used OpenCV for image processing to calculate the T_strip/C_strip intensity ratio. This ratio plays a pivotal role in hCG kits, forming a linear relationship when plotted against the concentration of hCG hormone.
 
@@ -82,17 +82,17 @@ The object detection model successfully detects the regions of interest.
 
 The image processing of ROI also gives pretty satisfying results. The T_strip/C_strip intensity ratio shows an increasing trend with increasing concentrations, which is a desired outcome. The concentration vs T/C ratio plot plot shows a nearly linear relation.
 
-### **T/C intensity ratio**
-
-![50 iu/ml](https://i.ibb.co/SVGnxH4/image.png)
-
 ### **concentration vs T/C intensity ratio plot**
+![Intensity ratio vs Concentration](https://github.com/aaravjn/smart-biosensor/assets/73699304/0dcce4e2-a655-4677-a680-6b55844b99a8)
 
-![50 iu/ml](https://i.ibb.co/CB90g60/image.png)
 
-# What next:
+# Recent improvements in the Algorithm:
+![Concentration vs Time(s)](https://github.com/aaravjn/smart-biosensor/assets/73699304/7844c87d-8e46-499c-b2db-17d04fbb7639)
 
-The project is ongoing, and our next goal is to build a neural network, train it on the T/C intensity ratio vs concentration data and make it predict the concentration from the T/C intensity ratio(obtained above) of the input image. Deploy the model to an app and make it make real-time predictions.
+The above image represents the fluctuations in the predictions made by our previous algorithm; this also shows that the colour reading takes a lot of time to stabilize (> 10 minutes in our observation). Thus, the improvement is to take the average of the ratios obtained from multiple images. This slightly improves the R2 score of the curve obtained from the linear regression.
+
+# Future work
+To make the algorithm more accurate over higher concentrations, a neural network has to be trained to consider the **hook effect** and the **saturation phenomenon**.
 
 ### Steps to run the backend (For Linux/Mac OS).
 - Create a virtual environment to install the necessary Python packages.
