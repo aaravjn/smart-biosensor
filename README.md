@@ -23,7 +23,8 @@ After sufficient preprocessing of image data, we custom-trained the model using 
 ![metrics](https://i.ibb.co/YL1Ghkm/results.png)
 
 **test**
-![test](https://i.ibb.co/SK5GxDz/image.png)
+![smart-biosensor](https://github.com/user-attachments/assets/1db78acb-0bce-4182-8bcb-d5288e973f9c)
+
 
 
 
