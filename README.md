@@ -1,9 +1,9 @@
 
-# hCG concentration prediction using deep learning and computer vision
+# Analyte concentration prediction using deep learning and computer vision
 
 [Model notebook link](https://colab.research.google.com/drive/1f5Pt4IbzCRCrD8QIA5-YvNCn05UAD8s2?usp=sharing) 
 
-We are working on a project, and our goal is to predict the concentration of analytes from images of test kits. We've curated a dataset of different test kit images for  different HCG concentrations, both newly collected data by our group and previously gathered in the lab. We used Roboflow for object detection to identify the distinct regions corresponding to the C and T strips in the kit. Subsequently, We used OpenCV for image processing to calculate the T_strip/C_strip intensity ratio. This ratio plays a pivotal role in hCG kits, forming a linear relationship when plotted against the concentration of hCG hormone.
+We are working on a project, and our goal is to predict the concentration of analytes from images of test kits. We've curated a dataset of different test kit images for  different Analyte concentrations, both newly collected data by our group and previously gathered in the lab. We used Roboflow for object detection to identify the distinct regions corresponding to the C and T strips in the kit. Subsequently, We used OpenCV for image processing to calculate the T_strip/C_strip intensity ratio. This ratio plays a pivotal role in Analyte kits, forming a linear relationship when plotted against the concentration of the Analyte.
 
 
 
